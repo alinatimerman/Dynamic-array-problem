@@ -1,0 +1,63 @@
+#pragma once
+#include "Service.h" 
+#include <assert.h>
+
+void runTests();
+
+void testOffert();
+void CreateOffert_AnyOffert_OffertCreated();
+void DestroyOffert_ExistingOffert_OffertDestroyed();
+void GetID_ExistingOffert_OffertID();
+void GetType_ExistingOffert_OffertType();
+void GetDestination_ExistingOffert_OffertDestination();
+void GetPrice_ExistingOffert_OffertPrice();
+
+void testDynamicallyAllocatedArray();
+void CreateDynamicArray_AnyArray_DynamicArrayCreated();
+void DestroyDynamicArray_ExistingDynamicArray_DynamicArrayDestroyed();
+void SizeOfDynamicArray_ExistingDynamicArray_SizeOfDynamicArray();
+void ResizeDynamicArray_ExistingDynamicArray_DynamicArrayResized();
+void AppendNewElement_AnyElement_ElementAppended();
+void DeleteElementByIndex_ValidIndex_ElementDeleted();
+void DeleteElementByIndex_InvalidIndex_ReturnsFalse();
+void UpdateElementByIndex_ValidIndex_ElementUpdated();
+void UpdateElementByIndex_InvalidIndex_ReturnsFalse();
+void GetElementByIndex_AnyValidIndex_ReturnsElementFromGivenIndex();
+
+void testRepository();
+void CreateRepository_AnyRepository_RepositoryCreated();
+void DestroyOffertsList_ExistingOffertsList_OffertsListDestroyed();
+void DestroyHistoryList_CurrentHistoryList_HistoryDestroyed();
+void DestroyRepository_AnyRepository_RepositoryDestroyed();
+void FindOffert_ElementInList_ReturnsOffertIndex();
+void FindOffert_ElementNotInList_ReturnsFalse();
+void AppendHistoryList_AnyRepository_AppendsHistory();
+void AddOffert_NewOffert_ReturnsTrue();
+void AddOffert_ExistingOffert_ReturnsFalse();
+void DeleteOffert_OffertInList_ReturnsTrue();
+void DeleteOffert_OffertNotInList_ReturnFalse();
+void UpdateOffert_OffertInList_ReturnsTrue();
+void UpdateOffert_OffertNotInList_ReturnFalse();
+void GetOffertsList_AnyRepository_ReturnsOffertsList();
+void Undo_AnyRepositoryWithAvailableUndo_ReturnsTrue();
+void Undo_AnyRepositoryWithUnavailableUndo_ReturnsFalse();
+void Redo_AnyRepositoryWithAvailableRedo_ReturnsTrue();
+void Redo_AnyRepositoryWithUnavailableRedo_ReturnsFalse();
+void DeleteAdditionalUndos_AnyRepository_DeletesAdditionalUndos();
+void GetCopyOfOfferts_ExistingListOfOfferts_ReturnsCopyOfOffertsList();
+
+void testService();
+void CreateService_AnyService_ServiceCreated();
+void DestroyService_ExistingService_ServiceDestroyed();
+void FindOffertService_OffertsID_ReturnsOffert();
+void AddOffertService_NewOffert_ReturnsTrue();
+void AddOffertService_ExistingOfferts_ReturnsFalse();
+void DeleteOffertService_OffertInList_ReturnsTrue();
+void DeleteOffertService_OffertNotInList_ReturnsFalse();
+void UpdateOffertService_OffertInList_ReturnsTrue();
+void UpdateOffertService_OffertNotInList_ReturnsFalse();
+void GetOffertsListService_AnyService_ReturnsOffertsList();
+void UndoService_AnyServiceWithAvailableUndo_ReturnsTrue();
+void UndoService_AnyServiceWithUnavailableUndo_ReturnsFalse();
+void RedoService_AnyServiceWithAvailableRedo_ReturnsTrue();
+void RedoService_AnyServiceWithUnavailableRedo_ReturnsFalse();
